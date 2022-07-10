@@ -21,7 +21,7 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker push bitcliff/udagram-api-feed:v1
-  - docker push bitcliff/udagram-api-user:v1
-  - docker push bitcliff/udagram-frontend:v1
-  - docker push bitcliff/reverseproxy:v1
+  - docker push tolu1292/udagram-api-feed:v1
+  - docker push tolu1292/udagram-api-user:v1
+  - docker push tolu1292/udagram-frontend:v1
+  - docker push tolu1292/reverseproxy:v1
