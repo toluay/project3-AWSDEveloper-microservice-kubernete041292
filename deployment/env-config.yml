@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-config
+
+data:
+  POSTGRESS_USERNAME: project3041292
+  POSTGRESS_PASSWORD: project3041292
+  POSTGRESS_DB: project3041292
+  POSTRGRESS_HOST: project3041292.cuzpnluy1wvx.us-east-1.rds.amazonaws.com
+  AWS_BUCKET: arn:aws:s3:::project3-041292
+  AWS_REGION: us-east-1
+  AWS_PROFILE: default
+  JWT_TOKEN: testing
+  URL: http://localhost:8100
