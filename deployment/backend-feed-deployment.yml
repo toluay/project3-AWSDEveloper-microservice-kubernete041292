@@ -2,17 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend-feed
-  
 spec:
+  selector:
+    matchLabels:
+      run: backend-feed
   replicas: 2
   template:
     metadata:
       labels:
-        run: backend-feed 
+        run: backend-feed
     spec:
       containers:
-      - name: backed-feed
-        image: docker.io/tolu1292/udagram-api-feed:v1
+      - name: backend-feed
+        image: docker.io/tolu1292/udagram-api-feed
         ports:
         - containerPort: 80
         resources:

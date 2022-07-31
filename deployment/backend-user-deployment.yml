@@ -2,17 +2,19 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: backend-user
-  
 spec:
+  selector:
+    matchLabels:
+      run: backend-user
   replicas: 2
   template:
     metadata:
       labels:
-        run: backend-user 
+        run: backend-user
     spec:
       containers:
-      - name: backed-user
-        image: docker.io/tolu1292/udagram-api-user:v1
+      - name: backend-user
+        image: docker.io/tolu1292/udagram-api-user
         ports:
         - containerPort: 80
         resources:

@@ -1,19 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: udagram-frontend
-  
+  name: frontend
 spec:
+  selector:
+    matchLabels:
+      run: frontend
   replicas: 2
   template:
     metadata:
       labels:
-        run: udagram-frontend 
+        run: frontend
     spec:
       containers:
-      - name: udagram-frontend
-        image: docker.io/tolu1292/udagram-frontend:v1
-        ports:
+      - name: frontend
+        image: docker.io/tolu1292/udagram-frontend
+        ports: 
         - containerPort: 80
         resources:
           limits:

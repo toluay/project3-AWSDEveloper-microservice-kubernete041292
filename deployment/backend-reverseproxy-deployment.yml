@@ -1,18 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: backend-reverseproxy
-  
+  name: reverseproxy
 spec:
+  selector:
+    matchLabels:
+      run: reverseproxy
   replicas: 2
   template:
     metadata:
       labels:
-        run: backend-reverseproxy 
+        run: reverseproxy
     spec:
       containers:
-      - name: backed-reverseproxy
-        image: docker.io/tolu1292/udagram-reverseproxy:v1
+      - name: reverseproxy
+        image: docker.io/tolu1292/reverseproxy
         ports:
         - containerPort: 80
         resources:
