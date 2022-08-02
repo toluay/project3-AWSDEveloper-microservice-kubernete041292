@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels: 
+    app: backend-feed
+  name: backend-feed
+  
+spec:
+  selector:
+    matchLabels:
+      app: backend-feed
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: backend-feed
+    spec:
+      containers:
+      - name: backend-feed
+        image: docker.io/tolu1292/udagram-api-feed
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: "500m"
+            memory: "4096Mi"
+          requests:
+            memory: "1000Mi"
+          requests:
+            cpu: 200m

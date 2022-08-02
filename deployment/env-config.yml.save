@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-config
+
+data:
+  POSTGRESS_USERNAME: postgres
+  POSTGRESS_PASSWORD: postgres
+  POSTGRESS_DB: postgres
+  POSTRGRESS_HOST: 
+  AWS_BUCKET: arn:aws:s3:::project3buk
+  AWS_REGION: us-east-1
+  AWS_PROFILE: default
+  JWT_TOKEN: testing
+  URL: http://localhost:8080
+metadata:
+  name: env-config

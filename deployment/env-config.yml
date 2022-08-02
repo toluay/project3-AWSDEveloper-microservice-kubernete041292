@@ -7,9 +7,11 @@ data:
   POSTGRESS_USERNAME: postgres
   POSTGRESS_PASSWORD: postgres
   POSTGRESS_DB: postgres
-  POSTRGRESS_HOST: postgres.c6nbcxnouzt3.us-east-1.rds.amazonaws.com
-  AWS_BUCKET: arn:aws:s3:::postgresdb1
+  POSTRGRESS_HOST: postgres1234.ctrfhnut1ifl.us-east-1.rds.amazonaws.com
+  AWS_BUCKET: arn:aws:s3:::project3developr3
   AWS_REGION: us-east-1
   AWS_PROFILE: default
   JWT_TOKEN: testing
-  URL: http://localhost:8100
+  URL: http://localhost:8080
+metadata:
+  name: env-config

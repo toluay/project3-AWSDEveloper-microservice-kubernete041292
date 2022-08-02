@@ -2,23 +2,27 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: frontend
+  labels:
+    app: frontend
 spec:
   selector:
     matchLabels:
-      run: frontend
+      app: frontend
   replicas: 2
   template:
     metadata:
       labels:
-        run: frontend
+        app: frontend
     spec:
       containers:
       - name: frontend
-        image: docker.io/tolu1292/udagram-frontend
+        image: docker.io/tolu1292/udagram-frontend:v1
         ports: 
         - containerPort: 80
+        imagePullPolicy: Always
         resources:
           limits:
-            cpu: 500m
+            cpu: "500m"
           requests:
-            cpu: 200m
+            cpu: "250m"
+      restartPolicy: Always
